@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Queue Status</title>
+  <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Check Your Position</h1>
+    <p>Enter your token number to see your current position in the queue</p>
+    <div class="input-group">
+      <input type="text" id="tokenInput" placeholder="123">
+      <button onclick="checkStatus()">Check Status</button>
+    </div>
+
+    <div class="status-box">
+      <h2>Your Token</h2>
+      <div class="token-number" id="tokenNumber">123</div>
+
+      <div class="status-info">
+        <div>
+          <p>Position</p>
+          <h3 id="position">1</h3>
+        </div>
+        <div>
+          <p>Ahead of You</p>
+          <h3 id="ahead">0</h3>
+        </div>
+        <div>
+          <p>Est. Wait Time</p>
+          <h3 id="wait">5 min</h3>
+        </div>
+      </div>
+
+      <h3>Virtual Queue Visualization</h3>
+      <div class="queue-visualization" id="queue">
+        <!-- Dynamic tokens will be appended here -->
+      </div>
+
+      <div class="legend">
+        <span class="legend-item current">Current</span>
+        <span class="legend-item coming">Coming up</span>
+        <span class="legend-item you">You</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script1.js"></script>
+</body>
+</html>
